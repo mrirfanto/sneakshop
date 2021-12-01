@@ -19,7 +19,7 @@ const cartItemsFromLocalStorage = localStorage.getItem("cartItems")
   : [];
 const initialState = {
   cart: {
-    cartitems: cartItemsFromLocalStorage,
+    cartItems: cartItemsFromLocalStorage,
   },
 };
 const middleware = [thunk];

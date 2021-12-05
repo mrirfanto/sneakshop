@@ -1,6 +1,6 @@
 import React from "react";
 import { Nav } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 const CheckoutSteps = ({ step1, step2, step3, step4 }) => {
   const navigate = useNavigate();

@@ -21,22 +21,28 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link onClick={() => navigate("/cart")}>
-                <i className="fas fa-shopping-cart"></i> Cart
-              </Nav.Link>
+              <Nav.Item>
+                <Nav.Link onClick={() => navigate("/cart")}>
+                  <i className="fas fa-shopping-cart"></i> Cart
+                </Nav.Link>
+              </Nav.Item>
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id="username">
-                  <Nav.Link onClick={() => navigate("/profile")}>
-                    <NavDropdown.Item>Profile</NavDropdown.Item>
-                  </Nav.Link>
-                  <Nav.Link onClick={logoutHandler}>
-                    <NavDropdown.Item>Logout</NavDropdown.Item>
-                  </Nav.Link>
+                  <NavDropdown.Item>
+                    <Nav.Link onClick={() => navigate("/profile")}>
+                      Profile
+                    </Nav.Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Nav.Link onClick={logoutHandler}>Logout</Nav.Link>
+                  </NavDropdown.Item>
                 </NavDropdown>
               ) : (
-                <Nav.Link onClick={() => navigate("/login")}>
-                  <i className="fas fa-user"></i> Sign In
-                </Nav.Link>
+                <Nav.Item>
+                  <Nav.Link onClick={() => navigate("/login")}>
+                    <i className="fas fa-user"></i> Sign In
+                  </Nav.Link>
+                </Nav.Item>
               )}
             </Nav>
           </Navbar.Collapse>

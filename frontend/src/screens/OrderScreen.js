@@ -14,9 +14,7 @@ const PlaceOrderScreen = () => {
   const orderId = params.id;
 
   useEffect(() => {
-    if (!order || order._id !== orderId) {
-      dispatch(getOrderDetails(orderId));
-    }
+    dispatch(getOrderDetails(orderId));
   }, [dispatch, orderId]);
 
   const orderDetails = useSelector((state) => state.orderDetails);

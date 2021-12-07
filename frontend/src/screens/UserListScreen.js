@@ -67,7 +67,7 @@ const UserListScreen = () => {
                   )}
                 </td>
                 <td className="p-2 d-flex justify-content-center">
-                  <Link className="m-r-2" to={`/user/${user._id}/edit`}>
+                  <Link className="m-r-2" to={`/admin/user/${user._id}/edit`}>
                     <Button variant="dark" className="btn-sm">
                       <i className="fas fa-edit"></i>
                     </Button>

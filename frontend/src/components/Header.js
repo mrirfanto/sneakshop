@@ -3,6 +3,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
+import SearchBox from "./SearchBox";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Header = () => {
           <Navbar.Brand onClick={() => navigate("/")}>SneakShop</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
+            <SearchBox />
             <Nav className="ms-auto">
               <Nav.Item>
                 <Nav.Link onClick={() => navigate("/cart")}>
